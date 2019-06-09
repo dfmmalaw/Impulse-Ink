@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar'
 import Form from './Components/InfoForm'
 import SubmitButton from './Components/SubmitButton';
 import Container from '@material-ui/core/Container';
+import Checkbox from './Components/Checkbox';
 import './App.css';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
      <Container maxWidth="md">
      <NavBar />
      <Form />
-     <SubmitButton />
+     <br />
+     <Checkbox /> 
+     <SubmitButton /> 
      </Container>     
    </div>
   );
