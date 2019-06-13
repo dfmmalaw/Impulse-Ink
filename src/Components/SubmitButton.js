@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContainedButtons(props) {
   const classes = useStyles();
-  {
+  
     return (
       <div>
         <Button variant="contained" color="primary" className={classes.button} disabled = {!props.isEnabled}>
@@ -17,5 +17,4 @@ export default function ContainedButtons(props) {
         </Button>
       </div>
     );
-  }
 }
