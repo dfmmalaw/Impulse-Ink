@@ -9,10 +9,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContainedButtons(props) {
   const classes = useStyles();
+
+  const onClickBtn = () => {
+    console.log(props.values);
+  };
   
     return (
       <div>
-        <Button variant="contained" color="primary" className={classes.button} disabled = {!props.isEnabled}>
+        <Button variant="contained" color="primary" className={classes.button} disabled = {!props.isEnabled} type="submit" onClick={onClickBtn}>
           Submit
         </Button>
       </div>

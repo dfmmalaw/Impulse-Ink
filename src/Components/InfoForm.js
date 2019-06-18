@@ -169,28 +169,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Form() {
+function Form(props) {
   const classes = useStyles();
-  const [values, setValues] = React.useState({
-    name: '',
-    age: '',
-    description: '',
-    location: 'Arm-R',
-  });
 
-  const handleChange = name => event => {
-    setValues({ ...values, [name]: event.target.value });
-  };
+  const { values, handleChangeForm } = props;
 
   return (
 
-    <form className={classes.container} noValidate autoComplete="off">
+    <form className={classes.container} noValidate autoComplete="off" >
       <TextField
         id="outlined-name"
         label="Name"
         className={classes.textField}
         value={values.name}
-        onChange={handleChange('name')}
+        onChange={handleChangeForm('name')}
         margin="normal"
         variant="outlined"
       />
@@ -200,7 +192,7 @@ function Form() {
         label="Age"
         className={classes.textField}
         value={values.age}
-        onChange={handleChange('age')}
+        onChange={handleChangeForm('age')}
         margin="normal"
         variant="outlined"
       />
@@ -209,6 +201,8 @@ function Form() {
         id="outlined-email-input"
         label="Email"
         className={classes.textField}
+        value={values.email}
+        onChange={handleChangeForm('email')}
         type="email"
         name="email"
         autoComplete="email"
@@ -222,7 +216,7 @@ function Form() {
         label="Select"
         className={classes.textField}
         value={values.styles}
-        onChange={handleChange('styles')}
+        onChange={handleChangeForm('styles')}
         SelectProps={{
           MenuProps: {
             className: classes.menu,
@@ -246,7 +240,7 @@ function Form() {
         label="Select"
         className={classes.textField}
         value={values.locations}
-        onChange={handleChange('locations')}
+        onChange={handleChangeForm('locations')}
         SelectProps={{
           MenuProps: {
             className: classes.menu,
@@ -268,7 +262,7 @@ function Form() {
         label="Specific Location"
         className={classes.textField}
         value={values.specificLocation}
-        onChange={handleChange('specificLocation')}
+        onChange={handleChangeForm('specificLocation')}
         margin="normal"
         helperText="Detailed location (ie. wrist, forearm, bicep, half/full sleeve, etc.)"
         variant="outlined"
@@ -280,7 +274,7 @@ function Form() {
         multiline
         rowsMax="4"
         value={values.description}
-        onChange={handleChange('description')}
+        onChange={handleChangeForm('description')}
         className={classes.textField}
         margin="normal"
         helperText="Please be as detailed as possible"
@@ -293,7 +287,7 @@ function Form() {
         label="Select"
         className={classes.textField}
         value={values.budgets}
-        onChange={handleChange('budgets')}
+        onChange={handleChangeForm('budgets')}
         SelectProps={{
           MenuProps: {
             className: classes.menu,
@@ -316,7 +310,7 @@ function Form() {
         label="Select"
         className={classes.textField}
         value={values.days}
-        onChange={handleChange('days')}
+        onChange={handleChangeForm('days')}
         SelectProps={{
           MenuProps: {
             className: classes.menu,
@@ -339,7 +333,7 @@ function Form() {
         label="Select"
         className={classes.textField}
         value={values.months}
-        onChange={handleChange('months')}
+        onChange={handleChangeForm('months')}
         SelectProps={{
           MenuProps: {
             className: classes.menu,

@@ -16,6 +16,23 @@ function App() {
     checkbox: false,
 });
 
+const [values, setValues] = React.useState({
+  name: '',
+  age: '',
+  email: '',
+  styles: '',
+  locations: '',
+  specificLocation: '',
+  description: '',
+  budgets: '',
+  days: '',
+  months: ''
+});
+
+const handleChangeForm = name => event => {
+  setValues({ ...values, [name]: event.target.value });
+};
+
 const handleChange = event => {
   setState({ ...state, [event.target.name]: event.target.checked });
 };
@@ -32,7 +49,7 @@ const handleChange = event => {
       creating designs. Thank you and we look forward to making art! 
       </div>
 
-     <Form />
+     <Form values={values} handleChangeForm={handleChangeForm} />
      <div style={divStyle}>
      <br />
      <p>Appointment dates are secured by deposit</p>
