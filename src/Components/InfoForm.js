@@ -6,19 +6,19 @@ import TextField from '@material-ui/core/TextField';
 
 const locations = [
   {
-    value: 'Arm-R',
+    value: 'Right Arm',
     label: 'Right Arm',
   },
   {
-    value: 'Arm-L',
+    value: 'Left Arm',
     label: 'Left Arm',
   },
   {
-    value: 'Leg-R',
+    value: 'Right Leg',
     label: 'Right Leg',
   },
   {
-    value: 'Leg-L',
+    value: 'Left Leg',
     label: 'Left Leg',
   },
   {
@@ -45,15 +45,15 @@ const locations = [
 
 const styles = [
     {
-        value: 'BG',
+        value: 'Black and Grey',
         label: 'Black and Grey'
     },
     {
-        value: 'C',
+        value: 'Color',
         label: 'Color'
     },
     {
-        value: 'B',
+        value: 'Infused/Both',
         label: 'Infused/Both'
     },
 ];
@@ -101,19 +101,19 @@ const days = [
 const months = [
 
     {
-        value: 'Jan',
+        value: 'January',
         label: 'January'
     },
     {
-        value: 'Feb',
+        value: 'February',
         label: 'February'
     },
     {
-        value: 'Mar',
+        value: 'March',
         label: 'March'
     },
     {
-        value: 'Apr',
+        value: 'April',
         label: 'April'
     },
     {
@@ -125,27 +125,27 @@ const months = [
         label: 'June'
     },
     {
-        value: 'Jul',
+        value: 'July',
         label: 'July'
     },
     {
-        value: 'Aug',
+        value: 'August',
         label: 'August'
     },
     {
-        value: 'Sep',
+        value: 'September',
         label: 'September'
     },
     {
-        value: 'Oct',
+        value: 'October',
         label: 'October'
     },
     {
-        value: 'Nov',
+        value: 'November',
         label: 'November'
     },
     {
-        value: 'Dec',
+        value: 'December',
         label: 'December'
     },
 ];

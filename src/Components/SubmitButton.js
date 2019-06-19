@@ -8,10 +8,29 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function ContainedButtons(props) {
-  const classes = useStyles();
+  const classes = useStyles();  
 
   const onClickBtn = () => {
-    console.log(props.values);
+
+    const textBuilder = () => {
+      var doc = "";
+      for (const key in props.values) {
+       doc += key + ": " + props.values[key] + "<br/>";      
+      }
+      return doc;
+    } 
+    
+    window.Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "dfmmalaw@gmail.com",
+      Password : "d2296492-2689-49f7-ae3d-584f1507d23a",
+      To : 'dfmmalaw@gmail.com',
+      From : "dfmmalaw@gmail.com",
+      Subject : "This is the subject",
+      Body : textBuilder()
+  }).then(
+    message => alert(message)
+  );
   };
   
     return (

@@ -60,7 +60,7 @@ const handleChange = event => {
      </div>
 
      <Checkbox name="checkbox" onChange={handleChange} checked={state.checkbox} />
-     <SubmitButton isEnabled={state.checkbox} /> 
+     <SubmitButton isEnabled={state.checkbox} values={values}/> 
      </Container>     
    </div>
   );
