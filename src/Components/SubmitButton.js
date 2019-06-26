@@ -25,7 +25,7 @@ function SubmitButton(props) {
       Host : "smtp25.elasticemail.com",
       Username : "dfmmalaw@gmail.com",
       Password : "d2296492-2689-49f7-ae3d-584f1507d23a",
-      To : 'dfmmalaw@gmail.com',
+      To : 'impulseink22@gmail.com',
       From : "dfmmalaw@gmail.com",
       Subject : "New Client Info",
       Body : textBuilder()
