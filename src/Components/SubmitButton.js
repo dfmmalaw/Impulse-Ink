@@ -22,9 +22,7 @@ function SubmitButton(props) {
     } 
     
     window.Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "dfmmalaw@gmail.com",
-      Password : "d2296492-2689-49fa7-ae3d-584f1507d23a",
+      SecureToken : "2827323c-68c2-4826-983e-0ce78e7bb26e",
       To : 'dfmmalaw@gmail.com',
       From : "dfmmalaw@gmail.com",
       Subject : "New Client Info",
